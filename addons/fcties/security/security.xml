@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="fcties_coordinador" model="res.groups">
+        <field name="name">Fcties / Coordinador</field>
+    </record>
+    <record id="fcties_profesor" model="res.groups">
+        <field name="name">Fcties / Profesor</field>
+    </record>
+</odoo>
