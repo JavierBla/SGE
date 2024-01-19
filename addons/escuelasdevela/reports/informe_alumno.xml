@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        id="escuelasdevela.informe_alumno"
+        string="Informe sobre alumnos"
+        model="escuelasdevela.alumno"
+        report_type="qweb-pdf"
+        name="escuelasdevela.informe_alumno_view"
+        file="escuelasdevela.informe_alumno_view"/>
+    
+    <template id="informe_alumno_view">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="alumno">
+                <div class="page">
+                    <h1 t-field="alumno.name"/>
+                    <div>
+                        <strong>Email: </strong>
+                        <span t-field="alumno.email"/>
+                    </div>
+                    <div>
+                        <strong>Teléfono: </strong>
+                        <span t-field="alumno.telefono"/>
+                    </div>
+                    <div>
+                        <strong>Número de matrícula: </strong>
+                        <span t-field="alumno.numMatricula"/>
+                    </div>
+                    <div>
+                        <strong>Escuela: </strong>
+                        <span t-field="alumno.escuela"/>
+                    </div>
+                </div>
+            </t>
+        </t>    
+    </template>
+</odoo>
