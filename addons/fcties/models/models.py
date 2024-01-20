@@ -23,7 +23,7 @@ class fcties_alumno(models.Model):
     name = fields.Char(string="Nombre",required=True)
     apellidos = fields.Char(string="Apellidos",required=True)
     fechaNacimiento = fields.Date(string="Fecha de nacimiento",required=True)
-    cursoAcademico = fields.Date(string="Curso Academico")
+    cursoAcademico = fields.Char(string="Curso Academico")
     email = fields.Char(string="Correo electrónico")
     telefono = fields.Char(string="Teléfono")
     ciclo = fields.Selection([("0","DAM"),("1","DAW"),("2","ASIX")],default="0",string="Ciclo formativo",required=True)
